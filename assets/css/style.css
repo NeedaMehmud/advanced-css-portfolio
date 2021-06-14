@@ -1,0 +1,58 @@
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #1f6ba1;
+  width: 100%;
+}
+
+/* links inside the navigation bar */
+nav a {
+  float: right;
+  color: #f2f2f2;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+h1 {
+  padding: 30px 30px;
+  font-size: 25px;
+  float: left;
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .main {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
