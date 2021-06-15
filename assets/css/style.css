@@ -11,6 +11,7 @@
   --eggshell: rgb(221, 221, 221);
   --lightPurple: #e6e6fa;
   --helvetica: Arial, Helvetica, sans-serif;
+  --darkBlue: #0000FF;
 }
 
 header {
@@ -29,9 +30,9 @@ body {
 
 nav {
   background-color: var(--teal);
-  width: 100%;
-  position: fixed;
   font-family: var(--helvetica);
+  overflow: hidden;
+  width: 100%;
 }
 
 container {
@@ -57,13 +58,8 @@ nav a:hover {
 h1 {
   padding: 30px 30px;
   font-size: 25px;
+  color: var(--white);
   float: left;
-}
-
-img {
-  height: 300px;
-  width: 100%;
-  background-position: center;
 }
 
 p {
@@ -94,19 +90,37 @@ footer {
   padding: 20px 20px 20px 20px;
 }
 
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-top: 0.8%;
+}
+
+.welcome-note {
+  height: 300px;
+  width: 100%;
+}
+
+.contact-me {
+  color: var(--teal);
+  font-size: 100%;
+  font-style: Arial, Helvetica, sans-serif;
+}
+
 /* Verticle Line */
 .vl-box-a {
-  border-left: 6px solid darkblue;
+  border-left: 6px solid var(--darkBlue);
   height: 100%;
 }
 
 .vl-box-c {
-  border-left: 6px solid darkblue;
+  border-left: 6px solid var(--darkBlue);
   height: 85%;
 }
 
 .vl-box-d {
-  border-left: 6px solid darkblue;
+  border-left: 6px solid var(--darkBlue);
   height: 50%;
 }
 
@@ -117,10 +131,12 @@ footer {
   grid-gap: 10px;
   grid-template-columns: repeat(2, [col] 100px);
   grid-template-rows: repeat(2, [row] auto);
+  padding: 50px;
+  padding-left: 200px;
 }
 
 .box {
-  /* background-color: #444; */
+  background-color: #444;
   color: var(--teal);
   border-radius: 10px;
   padding: 30px;
@@ -170,17 +186,17 @@ footer {
   grid-template-columns: 4fr 4fr;
 }
 
-/*
-.f {
-  grid-column: 1 / 3;
+
+/* .f {
+  grid-column: 3/ 2;
   grid-row: 1;
-}
+} */
 
-.g {
-  grid-column: 1;
+/* .g {
+  grid-column: 1/3;
   grid-row: 2;
-}
-
+} */
+/* 
 .h {
   grid-column: 2;
   grid-row: 2;
@@ -195,13 +211,6 @@ footer {
   main {
     left: 170px;
     top: 135px;
-  }
-
-  nav {
-    overflow: hidden;
-    background-color: var(--teal);
-    width: 100%;
-    position: fixed;
   }
 }
 
