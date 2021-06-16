@@ -3,9 +3,9 @@
 
 ## Welcome to my Portfolio! 
 
-In this assignment, I am showcasing my skills to you by highlighting what I have learned in this class. This portfolio was made with hard work, love CSS and HTML. Below is a list of Acceptance Criteria that have been met. 
+In this assignment, I am showcasing my skills to you by highlighting what I have learned in this class. This portfolio was made with hard work, love CSS and HTML. Below is a list of Acceptance Criteria that have been met except adding more images. I did my very best to add those imges within the grid but made the page worse. Because of some mistakes that were made, I have a large white gap. I tried to remove it but was not successful.  
 
-Go ahead and check it out!
+That being said, go ahead and check it out!
 
 ## User Story
 
@@ -36,6 +36,9 @@ WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
+## Link to github pages
+
+ https://needamehmud2017.github.io/advanced-css-portfolio/
 
 ## Screenshot
 
