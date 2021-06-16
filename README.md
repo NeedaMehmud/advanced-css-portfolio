@@ -44,7 +44,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 The following screenshot is the image of the Portfolio.
 
-![Screenshot](👩🏽 MyPortfolio.png)
+![Screenshot](MyPortfolio.png)
 
 
 
