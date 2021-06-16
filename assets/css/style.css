@@ -11,7 +11,7 @@
   --eggshell: rgb(221, 221, 221);
   --lightPurple: #e6e6fa;
   --helvetica: Arial, Helvetica, sans-serif;
-  --darkBlue: #0000FF;
+  --darkBlue: #0000ff;
 }
 
 header {
@@ -28,16 +28,17 @@ body {
   background-color: var(--lightPurple);
 }
 
+container {
+  position: relative;
+  width: 100%;
+}
+
 nav {
   background-color: var(--teal);
   font-family: var(--helvetica);
   overflow: hidden;
   width: 100%;
-}
-
-container {
-  position: relative;
-  width: 100%;
+  box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
 }
 
 /* Links within the Navigation bar */
@@ -53,13 +54,6 @@ nav a {
 nav a:hover {
   background-color: var(--lightPurple);
   color: var(--teal);
-}
-
-h1 {
-  padding: 30px 30px;
-  font-size: 25px;
-  color: var(--white);
-  float: left;
 }
 
 p {
@@ -81,6 +75,13 @@ footer {
 
 /* Classes */
 
+.name {
+  padding: 30px 30px;
+  font-size: 25px;
+  color: var(--white);
+  float: left;
+}
+
 .portfolio-heading {
   position: absolute;
   bottom: 63%;
@@ -88,13 +89,34 @@ footer {
   background-color: var(--teal);
   color: var(--white);
   padding: 20px 20px 20px 20px;
+  box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
 }
+
+.img-border {
+  border: var(--teal);
+}
+
+.img3 {
+  background-size: contain;
+  height: 50%;
+  width: 455%;
+  padding-top: 0%;
+}
+
+/* .img4 {
+  background-size: contain;
+  height: 50%;
+  width: 455%;
+  margin: 100px 500px 500px 500px;
+
+} */
 
 .avatar {
   width: 65px;
   height: 65px;
   border-radius: 50%;
   margin-top: 0.8%;
+  box-shadow: inset 0px 0px 8px var(--teal), 0 0 15px var(--teal);
 }
 
 .welcome-note {
@@ -102,10 +124,16 @@ footer {
   width: 100%;
 }
 
-.contact-me {
+.contact-me-link {
+  margin: 25px 50px 50px 25px;
+  text-shadow: var(--teal);
+  size: 60px;
+  text-align: left;
   color: var(--teal);
   font-size: 100%;
   font-style: Arial, Helvetica, sans-serif;
+  border-bottom: var(--darkBlue) 0.125em solid;
+  text-decoration: none;
 }
 
 /* Verticle Line */
@@ -116,7 +144,7 @@ footer {
 
 .vl-box-c {
   border-left: 6px solid var(--darkBlue);
-  height: 85%;
+  height: 50%;
 }
 
 .vl-box-d {
@@ -125,8 +153,7 @@ footer {
 }
 
 /* Grid */
-
-.wrapper {
+.container {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, [col] 100px);
@@ -136,10 +163,14 @@ footer {
 }
 
 .box {
-  background-color: #444;
+  /* background-color: #444; */
   color: var(--teal);
   border-radius: 10px;
   padding: 30px;
+}
+
+.box:hover {
+  box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
 }
 
 .a {
@@ -177,33 +208,42 @@ footer {
 .e {
   grid-column: col 3 / span 2;
   grid-row: row 2;
-  grid-template-columns: 4fr 4fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .f {
   grid-column: col 3 / span 2;
   grid-row: row 3;
   grid-template-columns: 4fr 4fr;
+  padding-top: 90px;
 }
 
+.sub-e-container {
+  display: grid;
+  grid-template-columns: repeat(2, [col] 100px);
+  grid-template-rows: repeat(1, [row] auto);
+  gap: 5px 5px;
+}
 
-/* .f {
-  grid-column: 3/ 2;
-  grid-row: 1;
-} */
+.sub-e-row1 {
+  grid-column: 1 / 3;
+}
 
-/* .g {
-  grid-column: 1/3;
-  grid-row: 2;
-} */
 /* 
-.h {
-  grid-column: 2;
-  grid-row: 2;
+.row2-1 {
+  grid-column: 2 / 2;
+  grid-row: row 2;
+} */
+
+/* 
+.row2-2 {
+  grid-column: 2 / 3;
+  grid-row: row 2;
 } */
 
 /* media query */
-@media screen and (min-width: 1025px) {
+/* desktop */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
   header {
     width: 75%;
   }
@@ -212,10 +252,131 @@ footer {
     left: 170px;
     top: 135px;
   }
-}
-
-@media screen and (max-width: 600px) {
   .wrapper {
     width: 100%;
+  }
+}
+/* tablet - landscape */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    width: 75%;
+  }
+
+  main {
+    left: 170px;
+    top: 135px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+
+  .portfolio-heading {
+    position: absolute;
+    bottom: 63%;
+    right: 4%;
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 20px 20px 20px 20px;
+    box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
+  }
+}
+
+/* phone */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  header {
+    width: 75%;
+  }
+
+  main {
+    left: 170px;
+    top: 135px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--helvetica);
+    background-color: var(--lightPurple);
+  }
+
+  container {
+    position: relative;
+    width: 100%;
+  }
+
+  nav {
+    background-color: var(--teal);
+    font-family: var(--helvetica);
+    overflow: hidden;
+    width: 100%;
+    box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
+  }
+  .avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-top: 0.8%;
+    box-shadow: inset 0px 0px 8px var(--teal), 0 0 15px var(--teal);
+  }
+  .portfolio-heading {
+    position: absolute;
+    bottom: 63%;
+    right: 4%;
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 20px 20px 20px 20px;
+    box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
+  }
+
+  .img-portfolio {
+    position: absolute;
+    bottom: 63%;
+    right: 4%;
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 20px 20px 20px 20px;
+    box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
+  }
+}
+
+/* phone landscscape & smaller */
+@media all and (max-width: 480px) {
+  header {
+    width: 75%;
+  }
+
+  main {
+    left: 170px;
+    top: 135px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: var(--helvetica);
+    background-color: var(--lightPurple);
+  }
+
+  container {
+    position: relative;
+    width: 100%;
+  }
+
+  nav {
+    background-color: var(--teal);
+    font-family: var(--helvetica);
+    overflow: hidden;
+    width: 100%;
+    box-shadow: inset 0px 0px 8px var(--darkBlue), 0 0 15px var(--darkBlue);
+  }
+  .avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-top: 0.8%;
+    box-shadow: inset 0px 0px 8px var(--teal), 0 0 15px var(--teal);
   }
 }
